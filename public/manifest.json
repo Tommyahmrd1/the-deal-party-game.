@@ -1,0 +1,3 @@
+{
+ "name":"الصفقة | THE DEAL","short_name":"الصفقة","description":"لعبة صفقات وصناديق غامضة لأصحابك على الموبايل","lang":"ar","dir":"rtl","start_url":"/","display":"standalone","background_color":"#080913","theme_color":"#100e20","icons":[{"src":"/icon.svg","type":"image/svg+xml","sizes":"any","purpose":"any maskable"}]
+}
