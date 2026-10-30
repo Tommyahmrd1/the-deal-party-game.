@@ -5,6 +5,6 @@
   "description": "Standalone Arabic real-time multiplayer party game. No external services required.",
   "main": "server.js",
   "engines": {"node": ">=20"},
-  "scripts": {"start": "node server.js", "dev": "node --watch server.js", "test": "node tests/smoke.js"},
+  "scripts": {"start": "node server.js", "dev": "node --watch server.js", "test": "node tests/smoke.js && node tests/p2p-smoke.js"},
   "dependencies": {}
 }
