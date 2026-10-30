@@ -71,7 +71,7 @@ function send(event,payload={},onSuccess){
  if(busy)return;
  busy=true;
  let done=false;
- const guard=setTimeout(()=>{if(done)return;done=true;busy=false;status('الطلب اتأخر. راجع اتصالك وحاول تاني.',true);},7000);
+ const guard=setTimeout(()=>{if(done)return;done=true;busy=false;status('الطلب اتأخر. راجع اتصالك وحاول تاني.',true);},16000);
  socket.emit(event,payload,res=>{
   if(done)return;done=true;clearTimeout(guard);busy=false;
   if(!res?.ok){status(res?.message||'حصلت مشكلة، جرّب تاني.',true);buzz('error');return;}
@@ -97,7 +97,7 @@ function renderLanding(){
    <button class="btn primary full" data-action="submit" type="button">${mode==='create'?'🎲 أنشئ غرفة اللعب':'🚀 ادخل القعدة'}</button>
    <div class="decor-line">أو</div>
    <button class="btn outline full" data-action="demo" type="button">🤖 جرّب اللعبة مع 3 بوتات</button>
-   <div class="form-foot">🔒 من غير تسجيل أو حساب • فلوس افتراضية فقط</div>
+   <div class="form-foot">🔒 من غير تسجيل أو حساب • فلوس افتراضية فقط • صاحب القعدة لازم يفضل فاتح اللعبة</div>
   </div>
  </section><section class="steps-strip"><div class="step"><div class="step-icon">📦</div><b>1. خد صندوق</b><p>محدش عارف قيمته</p></div><div class="step"><div class="step-icon">🤝</div><b>2. بيع واتفاوض</b><p>أقنع صحابك يشتروا</p></div><div class="step"><div class="step-icon">💥</div><b>3. افتح واكسب</b><p>الأغنى يكسب الملك</p></div></section>`;
 }
